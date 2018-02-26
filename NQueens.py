@@ -1,6 +1,7 @@
 import numpy as np
-from HillClimbing import i_hill_climbing
-from SimulatedAnnealing import simulated_annealing
+
+from local_searchs.HillClimbing import i_hill_climbing
+from local_searchs.SimulatedAnnealing import simulated_annealing
 
 n = int(input("Input the board's size:"))
 
