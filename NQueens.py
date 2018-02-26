@@ -16,9 +16,9 @@ def n_queens():
     if al == 1:
         solution = i_hill_climbing(iterations, n)
     elif al == 2:
-        p = int(input("Input the maximum of perturbations per iteration:"))
-        scs = int(input("Input the maximum of successes per iteration:"))
-        solution = simulated_annealing(n, iterations, p, scs)
+        # p = int(input("Input the maximum of perturbations per iteration:"))
+        # scs = int(input("Input the maximum of successes per iteration:"))
+        solution = simulated_annealing(n, iterations, 100, 20)
     else:
         print('Invalid Option! Try Again.')
 

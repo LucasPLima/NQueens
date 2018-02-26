@@ -1,5 +1,7 @@
 import sys
-import random
+
+
+from local_searchs.Problem import evalue, generate_state, neighbours
 
 
 def i_hill_climbing(iterations, dim):
@@ -33,30 +35,3 @@ def hill_climbing(state):
         return state
 
     return new_state
-
-
-def neighbours(current_state):
-    for i in range(len(current_state)):
-        n_state = generate_state(len(current_state))
-        yield n_state
-
-
-def evalue(state):
-    h = 0
-    for i in range(len(state)):
-        for j in range(len(state)):
-            if j == i:
-                continue
-            if state[i] == state[j]:
-                h = h+1
-                continue
-            if state[i] + i == state[j] + j or state[i] - i == state[j] - j:
-                h = h+1
-    return round(h/2)
-
-
-def generate_state(size):
-    col = []
-    for i in range(size):
-        col.append(random.randint(0, size-1))
-    return col
