@@ -1,7 +1,8 @@
 import math
 import random
 import sys
-from HillClimbing import evalue, generate_state
+
+from local_searchs.HillClimbing import evalue, generate_state
 
 
 def simulated_annealing(dim, iterations, perturbations, success):
