@@ -8,7 +8,7 @@ def simulated_annealing(dim, iterations, perturbations, success):
     i, j = 0, 0
     state = generate_state(dim)
     t = len(state)**2
-    alpha = 0.95
+    alpha = 0.2
     n_successes = sys.maxsize
 
     while i < iterations or n_successes == 0:
@@ -20,7 +20,7 @@ def simulated_annealing(dim, iterations, perturbations, success):
                 state = n_state
                 n_successes += 1
             j += 1
-        t = max(alpha * t, 0.01)
+        t = alpha * t
         i += 1
 
     print("Alpha: {}".format(alpha))
